@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{= it.title }}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ContentTools/1.6.9/content-tools.min.css" integrity="sha256-UeiknKLjq+EqxeVX8r+tBu2RFJNFyR/vg8bXWP+Oc6Q=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ContentTools/1.6.9/content-tools.js" integrity="sha256-SL3EMegUVNijDqreP+uM2gROLKruy5fggZa+n9MLjy8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ContentTools/1.6.9/content-tools.js"></script>
+    <script src="assets/js/kuzzle.js" async></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div data-editable data-name="main-content">{{= it.contents }}</div>
+  </body>
+</html>

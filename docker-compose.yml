@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  kuzzle:
+    image: kuzzleio/kuzzle:1.4.2
+    ports:
+      - 7512:7512
+    environment:
+      kuzzle_services__db__client__host: http://elasticsearch:9200
+      kuzzle_services__internalCache__node__host: redis
+      kuzzle_services__memoryStorage__node__host: redis
+      NODE_ENV: production
+    volumes:
+      - ./backend/kuzzle:/var/app/plugins/enabled/dlc
+      - ./src:/var/app/plugins/enabled/dlc/front
+
+  redis:
+    image: redis:3.2
+
+  elasticsearch:
+    image: kuzzleio/elasticsearch:5.4.1
+    environment:
+      ES_JAVA_OPTS: "-Xms128m -Xmx128m"
